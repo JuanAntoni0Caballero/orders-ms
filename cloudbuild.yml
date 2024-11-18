@@ -4,14 +4,14 @@ steps:
   args:
     - -c
     - |
-      docker build -t northamerica-northeast1-docker.pkg.dev/tienda-microservices/image-registry/orders-ms -f dockerfile.prod --platform=linux/amd64 --build-arg ORDERS_DATABASE_URL=$$DATABASE_URL .
+      docker build -t Googles_Cloud_URl_XXXXXXXX-docker.pkg.dev/project-name/registry/orders-ms -f dockerfile.prod --platform=linux/amd64 --build-arg ORDERS_DATABASE_URL=$$DATABASE_URL .
   secretEnv: ['DATABASE_URL']
 
 - name: 'gcr.io/cloud-builders/docker'
   args:
     [
       'push',
-      'northamerica-northeast1-docker.pkg.dev/tienda-microservices/image-registry/orders-ms',
+      'Googles_Cloud_URl_XXXXXXXX-docker.pkg.dev/project-name/registry/orders-ms',
     ]
 
 availableSecrets:
